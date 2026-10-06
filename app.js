@@ -8,7 +8,6 @@ const DATA = {
     { title: "Subdelegada de Comunicación, Delegación de Alumnos de la ETSISI", text: "Redacción, elaboración y difusión de contenidos informativos y gráficos en redes sociales y canales internos." },
     { title: "Voluntaria en Fundación Kyrios", text: "Pedagogía y enseñanza de aplicaciones móviles." },
     { title: "Participación en hackatons", text: "CodeBoost y Hackathon de Next Digital." },
-    { title: "Participación en hackatons", text: "CodeBoost y Hackathon de Next Digital." }
   ],
   education: [
     { title: "Universidad Politécnica de Madrid", text: "2023 - presente" },
