@@ -152,6 +152,10 @@ main {
   margin:0 auto
 }
 
+main:focus-visible {
+  outline: none;
+}
+
 main.leaving {
   opacity:0;
   transform:translateY(8px);
