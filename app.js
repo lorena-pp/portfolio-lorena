@@ -83,7 +83,7 @@ const Router = {
     document.getElementById("menu").innerHTML = Object.entries(ROUTES)
       .map(([k, r]) => `<li><a href="#/${k}" data-route="${k}">${r.label}</a></li>`)
       .join("");
-    addEventListener("popstate", () => this.go());
+    addEventListener("hashchange", () => this.go());
     this.go();
   },
   current() {
