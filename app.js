@@ -77,20 +77,19 @@ const ROUTES = {
 
 /* ============ 8. ROUTER ============ */
 
-const BASE_PATH = "/portfolio-lorena/";
-
 const Router = {
   view: document.getElementById("view"),
   init() {
     document.getElementById("menu").innerHTML = Object.entries(ROUTES)
-      .map(([k, r]) => `<li><a href="/portfolio-lorena/${k}" data-route="${k}">${r.label}</a></li>`)
+      .map(([k, r]) => `<li><a href="#/${k}" data-route="${k}">${r.label}</a></li>`)
+      .join("");
     addEventListener("popstate", () => this.go());
     this.go();
   },
   current() {
-    const path = location.pathname.replace(/^\/portfolio-lorena\/?/, "");
-    return path in ROUTES ? path : "";
-},
+    const key = location.hash.replace(/^#\/?/, "");
+    return key in ROUTES ? key : "";
+  },
   go() {
     const key = this.current(), route = ROUTES[key];
     this.view.classList.add("leaving");
