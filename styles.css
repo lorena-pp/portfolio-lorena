@@ -177,6 +177,7 @@ main.leaving {
 
 .hero {
   min-height:calc(100vh - 11rem);
+  min-height:calc(100svh - 11rem);
   display:flex;
   flex-direction:column;
   justify-content:center
@@ -212,7 +213,7 @@ main.leaving {
 .grid {
   display:grid;
   gap:1rem;
-  grid-template-columns:repeat(auto-fill,minmax(16rem,1fr));
+  grid-template-columns:repeat(auto-fill,minmax(min(16rem,100%),1fr));
 }
 
 .card {
@@ -226,7 +227,8 @@ main.leaving {
 
 .card h3 {
   font-size:1.35rem;
-  margin-bottom:.5rem
+  margin-bottom:.5rem;
+  overflow-wrap:anywhere
 }
 
 .card p {
@@ -288,7 +290,8 @@ main.leaving {
 
 .timeline h3 {
   font-size:1.25rem;
-  margin-bottom:.3rem
+  margin-bottom:.3rem;
+  overflow-wrap:anywhere
 }
 
 .timeline p {
@@ -299,7 +302,7 @@ main.leaving {
 .two {
   display:grid;
   gap:3rem;
-  grid-template-columns:repeat(auto-fit,minmax(18rem,1fr))
+  grid-template-columns:repeat(auto-fit,minmax(min(18rem,100%),1fr))
 }
 
 .empty {
@@ -319,14 +322,78 @@ main.leaving {
   color:var(--accent)
 }
 
-@media (max-width:640px) {
-    .nav {
-        flex-wrap:wrap
-    }.nav ul {
-        order:3;width:100%
-    } main {
-        padding-top:9rem
-    }
+@media (max-width:720px) {
+  .nav {
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:.5rem 1rem;
+    padding:.75rem var(--pad);
+    background:color-mix(in srgb,var(--bg) 88%,transparent);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px)
+  }
+
+  .nav nav {
+    grid-column:1/-1;
+    min-width:0
+  }
+
+  .nav ul {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:.25rem;
+    width:100%
+  }
+
+  .nav li a {
+    display:flex;
+    min-height:2.75rem;
+    align-items:center;
+    justify-content:center;
+    padding:.35rem .5rem;
+    font-size:.9rem;
+    text-align:center
+  }
+
+  .theme {
+    min-height:2.75rem
+  }
+
+  main {
+    padding-top:11rem
+  }
+
+  .hero {
+    min-height:calc(100vh - 11rem);
+    min-height:calc(100svh - 11rem)
+  }
+
+  .block {
+    margin-top:3.5rem
+  }
+
+  .two {
+    gap:2rem
+  }
+}
+
+@media (max-width:380px) {
+  :root {
+    --pad:1rem
+  }
+
+  .nav li a {
+    padding-inline:.35rem;
+    font-size:.85rem
+  }
+
+  .hero h1 {
+    font-size:clamp(3.5rem,20vw,5rem)
+  }
+
+  .page-title {
+    font-size:clamp(2.75rem,14vw,4rem)
+  }
 }
 
 @media (prefers-reduced-motion:reduce) {
