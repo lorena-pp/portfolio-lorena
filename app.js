@@ -2,7 +2,7 @@
 
 const DATA = {
   role: "Estudiante de Ingeniería del Software",
-  school: "ETSISI, Universidad Politécnica de Madrid",
+  school: "ETSISI - Universidad Politécnica de Madrid",
   about: "Me interesa entender cómo funcionan las cosas, no solo hacer que funcionen. Disfruto aprendiendo tecnologías nuevas y buscando formas más simples y elegantes de resolver problemas. Destaco por mi capacidad de comunicación y por desenvolverme con facilidad en entornos colaborativos.",
   experience: [
     { title: "Subdelegada de Comunicación, Delegación de Alumnos de la ETSISI", text: "Redacción, elaboración y difusión de contenidos informativos y gráficos en redes sociales y canales internos." },
@@ -17,13 +17,13 @@ const DATA = {
   tech: ["Java", "Python", "JavaScript", "HTML", "CSS", "Git"],
   skills: ["Gestión ágil de tareas", "Adaptabilidad", "Escucha activa", "Comunicación clara y técnica", "Aprendizaje metacognitivo"],
   projects: [
-    { tag: "Java", title: "Juego de cartas digital", text: "Desarrollado en pareja, aplicando principios de programación orientada a objetos." },
-    { tag: "Comunicación", title: "Comunicación de la Delegación de Alumnos", text: "Contenidos informativos y gráficos para redes sociales y canales internos de la ETSISI." }
+    { tag: "Aplicación", title: "Juego de cartas digital", text: "Desarrollado en pareja, aplicando principios de programación orientada a objetos." },
+    { tag: "Aplicación", title: "Chronicles", text: "En proceso | Aplicación full-stack diseñada para la gestión, registro y catalogación de contenido multimedia. El proyecto cuenta con un frontend interactivo en React y una arquitectura de backend robusta y escalable estructurada en capas, haciendo uso de servicios dedicados, DTOs y mappers para garantizar una separación clara de responsabilidades y un flujo de datos limpio." }
   ],
   interests: [
     { title: "Lu", text: "Mi perrita. Aparece en más fotos de mi móvil que yo." },
     { title: "Parques de atracciones", text: "Cuanto más alta y rápida la montaña rusa, mejor." },
-    { title: "Series", text: "Riverdale, Merlí y Ted Lasso." }
+    { title: "Series", text: "Riverdale, Merlí y Ted Lasso; mis favoritas :)" }
   ],
   resources: [],
   events: [
@@ -68,7 +68,7 @@ const ROUTES = {
     render: () => header("Recursos", "Apuntes y documentación de la carrera, para compartir.") +
       (DATA.resources.length ? cards(DATA.resources) : empty("Aún no hay recursos publicados. Añade el primero en <code>DATA.resources</code>.")) },
   eventos: { label: "Eventos", title: "Eventos", scene: { x: .5, y: -.15, s: .85, hue: .95 },
-    render: () => header("Eventos", "Actividades a las que he asistido.") + cards(DATA.events) },
+    render: () => header("Eventos & Formaciones", "Actividades a las que he asistido.") + cards(DATA.events) },
   contacto: { label: "Contacto", title: "Contacto", scene: { x: 0, y: .35, s: 1.4, hue: .82 },
     render: () => header("Contacto", "Escríbeme o échale un vistazo a mi código.") +
       `<div class="block">${DATA.contact.map(c => `<a class="big-link" href="${esc(c.href)}">${esc(c.label)}</a>`).join("")}</div>` }
