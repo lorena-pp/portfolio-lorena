@@ -51,7 +51,7 @@ const ROUTES = {
   "": { label: "Inicio", title: "Lorena Peñas", scene: { x: .55, y: .05, s: 1.15, hue: .78 },
     render: () => `
       <section class="hero"><h1><span>Lorena</span><span>Peñas</span></h1>
-        <p class="role">${esc(DATA.role)}.<br>${esc(DATA.school)}.</p></section>
+        <p class="role">${esc(DATA.role)}<br>${esc(DATA.school)}</p></section>
       <section class="block"><h2>Sobre mí</h2><p>${esc(DATA.about)}</p></section>
       <section class="block two">
         <div><h2>Experiencia</h2>${timeline(DATA.experience)}</div>
