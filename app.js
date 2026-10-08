@@ -18,7 +18,7 @@ const DATA = {
   skills: ["Gestión ágil de tareas", "Adaptabilidad", "Escucha activa", "Comunicación clara y técnica", "Aprendizaje metacognitivo"],
   projects: [
     { tag: "Aplicación", title: "Juego de cartas digital", text: "Desarrollado en pareja, aplicando principios de programación orientada a objetos." },
-    { tag: "Aplicación", title: "Chronicles", text: "En proceso | Aplicación full-stack diseñada para la gestión, registro y catalogación de contenido multimedia. El proyecto cuenta con un frontend interactivo en React y una arquitectura de backend robusta y escalable estructurada en capas, haciendo uso de servicios dedicados, DTOs y mappers para garantizar una separación clara de responsabilidades y un flujo de datos limpio." }
+    { tag: "Aplicación", title: "Chronicles", text: "En proceso | Aplicación full-stack diseñada, en pareja, para la gestión, registro y catalogación de contenido multimedia." }
   ],
   interests: [
     { title: "Lu", text: "Mi perrita. Aparece en más fotos de mi móvil que yo." },
