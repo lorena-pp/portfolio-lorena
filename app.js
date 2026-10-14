@@ -69,7 +69,7 @@ const ROUTES = {
       (DATA.resources.length ? cards(DATA.resources) : empty("Aún no hay recursos publicados. Añade el primero en <code>DATA.resources</code>.")) },
   eventos: { label: "Eventos", title: "Eventos", scene: { x: .5, y: -.15, s: .85, hue: .95 },
     render: () => header("Eventos", "Actividades a las que he asistido.") + cards(DATA.events) },
-  contacto: { label: "Contacto", title: "Contacto", scene: { x: 0, y: .35, s: 1.4, hue: .82 },
+    contacto: { label: "Contacto", title: "Contacto", scene: { x: 0, y: .35, s: 1.4, hue: .82 },
     render: () => header("Contacto", "Escríbeme o échale un vistazo a mi código.") +
       `<div class="block">${DATA.contact.map(c => `<a class="big-link" href="${esc(c.href)}">${esc(c.label)}</a>`).join("")}</div>` }
 };
