@@ -66,7 +66,7 @@ const ROUTES = {
     render: () => header("Intereses", "Lo que hay fuera del código.") + cards(DATA.interests) },
   recursos: { label: "Recursos", title: "Recursos", scene: { x: -.5, y: .15, s: 1, hue: .7 },
     render: () => header("Recursos", "Apuntes y documentación de la carrera, para compartir.") +
-      (DATA.resources.length ? cards(DATA.resources) : empty("Aún no hay recursos publicados. Añade el primero en <code>DATA.resources</code>.")) },
+      (DATA.resources.length ? cards(DATA.resources) : empty("Aún no hay recursos publicados. Mantente al corriente ;)")) },
   eventos: { label: "Eventos", title: "Eventos", scene: { x: .5, y: -.15, s: .85, hue: .95 },
     render: () => header("Eventos & Formaciones", "Actividades a las que he asistido.") + cards(DATA.events) },
   contacto: { label: "Contacto", title: "Contacto", scene: { x: 0, y: .35, s: 1.4, hue: .82 },
